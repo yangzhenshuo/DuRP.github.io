@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-width=1">
+  <title>FocalPolicy: Frequency-Optimized Chunking and Locally Anchored Flow Matching</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    /* 简单的自定义样式 */
+    .author-block { display: inline-block; margin-right: 15px; font-size: 1.2rem;}
+    .publication-title { font-weight: 700; margin-top: 2rem; }
+    .teaser-image { max-width: 100%; border-radius: 8px; margin-top: 20px;}
+    .abstract-content { text-align: justify; font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-2 publication-title">
+        FocalPolicy: Frequency-Optimized Chunking and Locally Anchored Flow Matching for Coherent Visuomotor Policy
+      </h1>
+      <h2 class="subtitle is-4">ICML 2026</h2>
+      
+      <div class="is-size-5">
+        <span class="author-block">Qian He<sup>1,2</sup>,</span>
+        <span class="author-block">Zhenshuo Yang<sup>1,2</sup>,</span>
+        <span class="author-block">Wenqi Liang<sup>3</sup>,</span>
+        <span class="author-block">Chunhui Hao<sup>1</sup>,</span>
+        <span class="author-block">Nicu Sebe<sup>3</sup>,</span>
+        <span class="author-block">Jiandong Tian<sup>1</sup></span>
+      </div>
+
+      <div class="is-size-6 mt-3">
+        <span class="author-block"><sup>1</sup>State Key Laboratory of Robotics and Intelligent Systems, Shenyang Institute of Automation, CAS</span><br>
+        <span class="author-block"><sup>2</sup>University of the Chinese Academy of Sciences</span><br>
+        <span class="author-block"><sup>3</sup>University of Trento</span>
+      </div>
+
+      <div class="buttons is-centered mt-5">
+        <a href="#" class="button is-dark is-rounded">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+          <span>Paper</span>
+        </a>
+        <a href="#" class="button is-dark is-rounded">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          <span>Code (Coming Soon)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <img src="./static/images/teaser.png" alt="FocalPolicy Teaser" class="teaser-image">
+    <h2 class="subtitle has-text-centered mt-3">
+      FocalPolicy employs a Foresight Composite Objective to synergize proximal precision with distal coherence across chunks.
+    </h2>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="content abstract-content">
+          <p>
+            Visuomotor policies aim to learn complex manipulation tasks from expert demonstrations. However, generating smooth and coherent trajectories remains challenging, as it requires balancing proximal precision with distal foresight. Existing approaches typically focus on optimizing intra-chunk action distributions, often neglecting the inter-chunk coherence. Consequently, inter-chunk discontinuities significantly impede the learning of coherent long-horizon actions.
+          </p>
+          <p>
+            To overcome this limitation and achieve a synergetic balance between precision and foresight, we propose FocalPolicy, a foresight-aware visuomotor policy that combines Frequency-Optimized Chunking with Locally Anchored flow matching. We introduce a foresight composite objective that supervises time-domain alignment within the proximal actions while regularizing frequency-domain structure over multiple future action chunks to improve cross-chunk coherence. To efficiently learn complex action distributions, we design locally anchored sampling to enhance target signal propagation efficiency during consistency flow matching training. Extensive experiments demonstrate that our method consistently outperforms existing approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Methodology</h2>
+    <img src="./static/images/pipeline.png" alt="FocalPolicy Pipeline" class="teaser-image">
+    <p class="mt-3 text-justify">
+      The pipeline of FocalPolicy. We propose Locally Anchored Sampling (LAS) to improve the training efficiency of consistency flow matching. The policy is optimized via a Foresight Composite Objective (FCO), which synergizes proximal precision with distal coherence.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Real-World Execution</h2>
+    <p class="has-text-centered mb-4">Demonstrating stable long-horizon execution on multi-stage tasks like Tower Stacking and Cup Matching.</p>
+    <img src="./static/images/real_world.png" alt="Real World Experiments" class="teaser-image">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>@inproceedings{he2026focalpolicy,
+  title={FocalPolicy: Frequency-Optimized Chunking and Locally Anchored Flow Matching for Coherent Visuomotor Policy},
+  author={He, Qian and Yang, Zhenshuo and Liang, Wenqi and Hao, Chunhui and Sebe, Nicu and Tian, Jiandong},
+  booktitle={Proceedings of the 43rd International Conference on Machine Learning},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+</body>
+</html>
